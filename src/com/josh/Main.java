@@ -6,18 +6,18 @@ public class Main {
 
     public static void main(String[] args) {
         //ask how many training times to enter
+        Scanner amountScanner = new Scanner(System.in);
+        System.out.println("How many training runs do you want to enter?");
+        int getcounter = amountScanner.nextInt();
 
-        getInfo();
+        getInfo(getcounter);
 
         System.out.println("finished");
     }
 
 
+    static HashMap getInfo(int counter) {
 
-    static HashMap getInfo() {
-        Scanner amountScanner = new Scanner(System.in);
-        System.out.println("How many training runs do you want to enter?");
-        int counter = amountScanner.nextInt();
         HashMap<String, Double> lakeInfo = new HashMap();
         for (int x = 0; x< counter; x++) {
             Scanner lakeScanner = new Scanner(System.in);
