@@ -10,9 +10,14 @@ public class Main {
         System.out.println("How many training runs do you want to enter?");
         int getcounter = amountScanner.nextInt();
 
-        getInfo(getcounter);
-
+        //getInfo(getcounter);
+        HashMap returnLakeInfo = getInfo(getcounter);
+        for (Object ob: returnLakeInfo.keySet()) {
+            System.out.print(ob);
+            System.out.print(returnLakeInfo.get(ob));
+        }
         System.out.println("finished");
+
     }
 
 
@@ -28,6 +33,8 @@ public class Main {
             double runTime = runScanner.nextDouble();
             lakeInfo.put(lakeName, runTime);
         }
+
         return lakeInfo;
     }
+
 }
